@@ -1,0 +1,786 @@
+/* ===== RESET & DASAR ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #1a1a1f;
+  color: #e8e6e3;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #1a1a1f, #2a2418);
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 3px solid #f5a623;
+}
+
+header h1 {
+  color: #f5a623;
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(245, 166, 35, 0.3);
+}
+
+header p {
+  color: #a8a49e;
+  margin: 0;
+}
+
+/* ===== HALAMAN ===== */
+.halaman {
+  display: none;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.halaman.aktif {
+  display: block;
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MENU MODE ===== */
+.mode-menu {
+  text-align: center;
+}
+
+.mode-menu h2 {
+  color: #f5a623;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.mode-menu > p {
+  color: #a8a49e;
+  margin-bottom: 40px;
+}
+
+.mode-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== CARD MODE ===== */
+.mode-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 420px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #e8e6e3;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #3a3a44;
+  transition: all 0.4s ease;
+  background: #25252d;
+  display: block;
+}
+
+.mode-card.ops {
+  background: linear-gradient(135deg, #25252d 0%, #2a2418 100%);
+}
+
+.mode-card.warfare {
+  background: linear-gradient(135deg, #25252d 0%, #1f2a2a 100%);
+}
+
+.mode-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: #f5a623;
+  box-shadow: 0 20px 40px rgba(245, 166, 35, 0.3);
+}
+
+.mode-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(245, 166, 35, 0.15),
+    transparent
+  );
+  transition: left 0.6s;
+}
+
+.mode-card:hover::before {
+  left: 100%;
+}
+
+.mode-card .ikon {
+  font-size: 4em;
+  display: block;
+  margin-bottom: 20px;
+  transition: transform 0.4s;
+}
+
+.mode-card:hover .ikon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.mode-card h3 {
+  color: #f5a623;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.mode-card p {
+  color: #a8a49e;
+  font-size: 0.95em;
+  margin-bottom: 20px;
+}
+
+.mode-card .badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #f5a623;
+  color: #1a1a1f;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== HEADER MODE ===== */
+.mode-header {
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  border: 2px solid #f5a623;
+}
+
+.mode-header.ops {
+  background: linear-gradient(135deg, #2a2418, #1a1a1f);
+}
+
+.mode-header.warfare {
+  background: linear-gradient(135deg, #1f2a2a, #1a1a1f);
+}
+
+.mode-header .ikon-besar {
+  font-size: 3.5em;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.mode-header h2 {
+  color: #f5a623;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.mode-header p {
+  color: #a8a49e;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== SUB-MENU ===== */
+.sub-menu {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.sub-tombol {
+  padding: 12px 24px;
+  background: #25252d;
+  color: #f5a623;
+  border-radius: 8px;
+  border: 2px solid #3a3a44;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sub-tombol:hover {
+  background: #f5a623;
+  color: #1a1a1f;
+  border-color: #f5a623;
+  transform: translateY(-3px);
+}
+
+/* ===== TAB KONTEN ===== */
+.tab-konten {
+  display: none;
+}
+
+.tab-konten.aktif-tab {
+  display: block;
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tab-konten h2 {
+  color: #f5a623;
+  margin-bottom: 15px;
+}
+
+.tab-konten p {
+  color: #d0ccc6;
+  margin-bottom: 15px;
+}
+
+.tab-konten ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.tab-konten li {
+  margin-bottom: 8px;
+  color: #d0ccc6;
+}
+
+.tab-konten strong {
+  color: #ffb84d;
+}
+
+/* ===== GRID SENJATA ===== */
+.grid-senjata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.kartu-senjata {
+  padding: 25px 20px;
+  background: #1a1a1f;
+  border: 2px solid #3a3a44;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.kartu-senjata:hover {
+  border-color: #f5a623;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(245, 166, 35, 0.25);
+  background: #25252d;
+}
+
+.kartu-senjata h3 {
+  color: #f5a623;
+  margin-bottom: 8px;
+  font-size: 1.3em;
+}
+
+.kartu-senjata p {
+  color: #a8a49e;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/* ===== DETAIL SENJATA ===== */
+.detail-senjata {
+  display: none;
+  margin-top: 30px;
+  padding: 25px;
+  background: #1a1a1f;
+  border-radius: 12px;
+  border-left: 5px solid #f5a623;
+}
+
+.detail-senjata.aktif-detail {
+  display: block;
+  animation: popIn 0.5s ease;
+}
+
+.detail-senjata h3 {
+  color: #f5a623;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+/* ===== VIDEO & PNG 9:16 ===== */
+.perbandingan {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.item {
+  flex: 1;
+  min-width: 260px;
+  max-width: 340px;
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  color: #f5a623;
+  margin-bottom: 10px;
+}
+
+.video-wrapper,
+.png-wrapper {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1a1a1f;
+  border: 2px solid #3a3a44;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.video-wrapper:hover,
+.png-wrapper:hover {
+  border-color: #f5a623;
+  box-shadow: 0 8px 25px rgba(245, 166, 35, 0.3);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.png-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1f;
+  color: #6a6660;
+  font-size: 1.1em;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== STAT BOX ===== */
+.stat-box {
+  margin-top: 30px;
+  padding: 25px;
+  background: #25252d;
+  border-radius: 12px;
+  border: 2px solid #3a3a44;
+}
+
+.stat-box h4 {
+  color: #f5a623;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+/* Stat Bar */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px 30px;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-nama {
+  flex: 0 0 90px;
+  color: #d0ccc6;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.stat-bar {
+  flex: 1;
+  height: 10px;
+  background: #1a1a1f;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #3a3a44;
+}
+
+.stat-isi {
+  height: 100%;
+  background: linear-gradient(90deg, #f5a623, #ffb84d);
+  border-radius: 5px;
+  transition: width 0.6s ease;
+}
+
+.stat-angka {
+  flex: 0 0 35px;
+  text-align: right;
+  color: #f5a623;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* ===== STAT TEKS (VERTIKAL) ===== */
+.stat-teks {
+  display: flex;
+  flex-direction: column; /* Bikin vertikal atas-bawah */
+  gap: 0;
+  border-top: 2px solid #3a3a44;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.teks-item {
+  display: flex;
+  justify-content: space-between; /* Label kiri, Nilai kanan */
+  align-items: center;
+  padding: 12px 5px;
+  border-bottom: 1px solid #3a3a44; /* Garis pemisah tipis antar baris */
+}
+
+.teks-item:last-child {
+  border-bottom: none; /* Baris terakhir tidak perlu garis bawah */
+}
+
+.teks-item span {
+  color: #a8a49e;
+  font-size: 0.95em;
+}
+
+.teks-item strong {
+  color: #f5a623;
+  font-size: 0.95em;
+  text-align: right;
+}
+
+/* ===== TOMBOL KEMBALI ===== */
+.kembali {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #1a1a1f;
+  color: #f5a623;
+  border-radius: 8px;
+  border: 2px solid #f5a623;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.kembali:hover {
+  background: #f5a623;
+  color: #1a1a1f;
+  transform: translateX(-5px);
+}
+
+/* ===== TOMBOL HOME ===== */
+.tombol-home {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #6a6660;
+  font-size: 0.85em;
+  border-top: 1px solid #3a3a44;
+  margin-top: 60px;
+}
+
+/* =========================================
+   UPDATE: BEFORE VS AFTER (WARNA & PANAH)
+========================================= */
+
+/* Hapus background kotak di tiap item biar lebih bersih */
+.banding-item {
+  background: transparent;
+  padding: 10px 0;
+  border-radius: 0;
+  border-bottom: 1px solid #2a2a33; /* Garis pemisah tipis */
+}
+
+/* Hapus border putus-putus di kotak luar (opsional, biar menyatu) */
+.stat-banding {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-top: 30px;
+}
+
+/* Warna Stat Bar */
+.banding-nilai .naik {
+  color: #4ade80;
+} /* Hijau */
+.banding-nilai .turun {
+  color: #ef4444;
+} /* Merah */
+.banding-nilai .sama {
+  color: #f5a623;
+} /* Kuning/Emas (warna default) */
+
+/* Warna Teks Before (Abu-abu) */
+.banding-teks .before {
+  color: #888;
+}
+
+/* Warna Panah */
+.panah-naik {
+  color: #4ade80;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.panah-turun {
+  color: #ef4444;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+/* Warna Teks After */
+.banding-teks .after.naik {
+  color: #4ade80;
+}
+.banding-teks .after.turun {
+  color: #ef4444;
+}
+.banding-teks .after.sama {
+  color: #f5a623;
+}
+
+/* Rapikan garis bawah teks terakhir */
+.bteks-item:last-child {
+  border-bottom: none;
+}
+
+/* =========================================
+   GRID KATEGORI OPERATOR
+========================================= */
+.grid-kategori-operator {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.kategori-operator {
+  background: #1a1a1f;
+  border: 2px solid #3a3a44;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.kategori-operator h3 {
+  color: #f5a623;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #3a3a44;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.list-operator {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kartu-operator {
+  background: #25252d;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #e8e6e3;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #3a3a44;
+  transition: all 0.3s;
+}
+
+.kartu-operator:hover {
+  background: #f5a623;
+  color: #1a1a1f;
+  transform: translateX(5px);
+  border-color: #f5a623;
+}
+
+/* =========================================
+   DETAIL OPERATOR (Tampilan Horizontal)
+========================================= */
+.detail-operator {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background: #1a1a1f; /* Latar gelap */
+  border-radius: 12px;
+  border: 2px solid #3a3a44;
+  animation: popIn 0.5s ease;
+}
+
+.detail-operator.aktif-operator {
+  display: flex; /* Ubah ke flex agar kiri-kanan */
+  flex-direction: row;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Bagian Kiri: Gambar PNG Vertikal */
+.op-image {
+  flex: 0 0 300px; /* Lebar gambar fix 300px */
+  max-height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #25252d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #3a3a44;
+}
+
+.op-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar PNG penuh dan tidak gepeng */
+  object-position: top;
+}
+
+/* Bagian Kanan: Teks Penjelasan */
+.op-text {
+  flex: 1; /* Mengisi sisa ruang */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.op-text h4 {
+  color: #ff3b3b; /* Warna merah menyala seperti di game */
+  font-size: 1.8em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.op-text .role {
+  color: #a8a49e;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #3a3a44;
+  padding-bottom: 10px;
+}
+
+.op-text p {
+  color: #d0ccc6;
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.op-text strong {
+  color: #f5a623;
+}
+
+/* Responsif: Jika di HP, gambar pindah ke atas */
+@media (max-width: 768px) {
+  .detail-operator.aktif-operator {
+    flex-direction: column;
+  }
+  .op-image {
+    flex: 0 0 250px;
+  }
+}
+
+/* =========================================
+   SKILL LIST OPERATOR
+========================================= */
+.op-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #25252d;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 3px solid #3a3a44;
+}
+
+/* Warna khusus untuk tiap label skill */
+.skill-label {
+  flex: 0 0 110px; /* Lebar label tetap */
+  font-weight: bold;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 3px;
+}
+
+.skill-label.ultimate {
+  color: #f5a623;
+} /* Kuning Emas */
+.skill-label.gadget {
+  color: #4ade80;
+} /* Hijau */
+.skill-label.passive {
+  color: #60a5fa;
+} /* Biru */
+
+.skill-desc {
+  color: #d0ccc6;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.skill-desc strong {
+  color: #e8e6e3;
+  display: block;
+  margin-bottom: 3px;
+}
