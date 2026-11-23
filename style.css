@@ -100,10 +100,6 @@ header p {
   background: linear-gradient(135deg, #25252d 0%, #2a2418 100%);
 }
 
-.mode-card.warfare {
-  background: linear-gradient(135deg, #25252d 0%, #1f2a2a 100%);
-}
-
 .mode-card:hover {
   transform: translateY(-10px) scale(1.03);
   border-color: #f5a623;
@@ -176,10 +172,6 @@ header p {
 
 .mode-header.ops {
   background: linear-gradient(135deg, #2a2418, #1a1a1f);
-}
-
-.mode-header.warfare {
-  background: linear-gradient(135deg, #1f2a2a, #1a1a1f);
 }
 
 .mode-header .ikon-besar {
@@ -260,16 +252,6 @@ header p {
   margin-bottom: 15px;
 }
 
-.tab-konten ul {
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
-
-.tab-konten li {
-  margin-bottom: 8px;
-  color: #d0ccc6;
-}
-
 .tab-konten strong {
   color: #ffb84d;
 }
@@ -305,12 +287,6 @@ header p {
   font-size: 1.3em;
 }
 
-.kartu-senjata p {
-  color: #a8a49e;
-  font-size: 0.9em;
-  margin: 0;
-}
-
 /* ===== DETAIL SENJATA ===== */
 .detail-senjata {
   display: none;
@@ -332,7 +308,7 @@ header p {
   font-size: 1.4em;
 }
 
-/* ===== VIDEO & PNG 9:16 ===== */
+/* ===== VIDEO PERBANDINGAN (TETAP 9:16) ===== */
 .perbandingan {
   display: flex;
   gap: 20px;
@@ -354,8 +330,7 @@ header p {
   margin-bottom: 10px;
 }
 
-.video-wrapper,
-.png-wrapper {
+.video-wrapper {
   width: 100%;
   aspect-ratio: 9 / 16;
   border-radius: 12px;
@@ -365,8 +340,7 @@ header p {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.video-wrapper:hover,
-.png-wrapper:hover {
+.video-wrapper:hover {
   border-color: #f5a623;
   box-shadow: 0 8px 25px rgba(245, 166, 35, 0.3);
 }
@@ -378,24 +352,46 @@ header p {
   display: block;
 }
 
-.png-wrapper img {
+/* ===== GABUNGAN POLA (BEFORE & AFTER) ===== */
+.png-gabungan-wrapper {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+  max-width: 600px;
+  margin: 30px auto;
+  background: #1a1a1f;
+  border: 2px solid #3a3a44;
+  border-radius: 12px;
+  padding: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.placeholder {
-  width: 100%;
-  height: 100%;
+.png-gabungan-wrapper:hover {
+  border-color: #f5a623;
+  box-shadow: 0 8px 25px rgba(245, 166, 35, 0.3);
+}
+
+.png-header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #1a1a1f;
-  color: #6a6660;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 15px;
   font-size: 1.1em;
-  text-align: center;
-  padding: 20px;
+  border-bottom: 2px solid #3a3a44;
+  padding-bottom: 10px;
+}
+
+.png-header .before-teks {
+  color: #888;
+}
+
+.png-header .after-teks {
+  color: #f5a623;
+}
+
+.png-gabungan-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
 }
 
 /* ===== STAT BOX ===== */
@@ -414,82 +410,59 @@ header p {
   letter-spacing: 1px;
 }
 
-/* Stat Bar */
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 15px 30px;
-  margin-bottom: 25px;
+/* ===== STAT-BANDING (BEFORE VS AFTER) ===== */
+.stat-banding {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-top: 30px;
 }
 
-.stat-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.banding-item {
+  background: transparent;
+  padding: 10px 0;
+  border-radius: 0;
+  border-bottom: 1px solid #2a2a33;
 }
 
-.stat-nama {
-  flex: 0 0 90px;
-  color: #d0ccc6;
-  font-size: 0.9em;
-  font-weight: bold;
+.banding-nilai .naik {
+  color: #4ade80;
 }
-
-.stat-bar {
-  flex: 1;
-  height: 10px;
-  background: #1a1a1f;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #3a3a44;
+.banding-nilai .turun {
+  color: #ef4444;
 }
-
-.stat-isi {
-  height: 100%;
-  background: linear-gradient(90deg, #f5a623, #ffb84d);
-  border-radius: 5px;
-  transition: width 0.6s ease;
-}
-
-.stat-angka {
-  flex: 0 0 35px;
-  text-align: right;
+.banding-nilai .sama {
   color: #f5a623;
+}
+
+.banding-teks .before {
+  color: #888;
+}
+
+.panah-naik {
+  color: #4ade80;
   font-weight: bold;
-  font-size: 0.9em;
+  margin: 0 5px;
 }
 
-/* ===== STAT TEKS (VERTIKAL) ===== */
-.stat-teks {
-  display: flex;
-  flex-direction: column; /* Bikin vertikal atas-bawah */
-  gap: 0;
-  border-top: 2px solid #3a3a44;
-  padding-top: 10px;
-  margin-top: 20px;
+.panah-turun {
+  color: #ef4444;
+  font-weight: bold;
+  margin: 0 5px;
 }
 
-.teks-item {
-  display: flex;
-  justify-content: space-between; /* Label kiri, Nilai kanan */
-  align-items: center;
-  padding: 12px 5px;
-  border-bottom: 1px solid #3a3a44; /* Garis pemisah tipis antar baris */
+.banding-teks .after.naik {
+  color: #4ade80;
 }
-
-.teks-item:last-child {
-  border-bottom: none; /* Baris terakhir tidak perlu garis bawah */
+.banding-teks .after.turun {
+  color: #ef4444;
 }
-
-.teks-item span {
-  color: #a8a49e;
-  font-size: 0.95em;
-}
-
-.teks-item strong {
+.banding-teks .after.sama {
   color: #f5a623;
-  font-size: 0.95em;
-  text-align: right;
+}
+
+.bteks-item:last-child {
+  border-bottom: none;
 }
 
 /* ===== TOMBOL KEMBALI ===== */
@@ -528,71 +501,6 @@ footer {
   font-size: 0.85em;
   border-top: 1px solid #3a3a44;
   margin-top: 60px;
-}
-
-/* =========================================
-   UPDATE: BEFORE VS AFTER (WARNA & PANAH)
-========================================= */
-
-/* Hapus background kotak di tiap item biar lebih bersih */
-.banding-item {
-  background: transparent;
-  padding: 10px 0;
-  border-radius: 0;
-  border-bottom: 1px solid #2a2a33; /* Garis pemisah tipis */
-}
-
-/* Hapus border putus-putus di kotak luar (opsional, biar menyatu) */
-.stat-banding {
-  border: none;
-  background: transparent;
-  padding: 0;
-  margin-top: 30px;
-}
-
-/* Warna Stat Bar */
-.banding-nilai .naik {
-  color: #4ade80;
-} /* Hijau */
-.banding-nilai .turun {
-  color: #ef4444;
-} /* Merah */
-.banding-nilai .sama {
-  color: #f5a623;
-} /* Kuning/Emas (warna default) */
-
-/* Warna Teks Before (Abu-abu) */
-.banding-teks .before {
-  color: #888;
-}
-
-/* Warna Panah */
-.panah-naik {
-  color: #4ade80;
-  font-weight: bold;
-  margin: 0 5px;
-}
-
-.panah-turun {
-  color: #ef4444;
-  font-weight: bold;
-  margin: 0 5px;
-}
-
-/* Warna Teks After */
-.banding-teks .after.naik {
-  color: #4ade80;
-}
-.banding-teks .after.turun {
-  color: #ef4444;
-}
-.banding-teks .after.sama {
-  color: #f5a623;
-}
-
-/* Rapikan garis bawah teks terakhir */
-.bteks-item:last-child {
-  border-bottom: none;
 }
 
 /* =========================================
@@ -654,14 +562,14 @@ footer {
   display: none;
   margin-top: 20px;
   padding: 20px;
-  background: #1a1a1f; /* Latar gelap */
+  background: #1a1a1f;
   border-radius: 12px;
   border: 2px solid #3a3a44;
   animation: popIn 0.5s ease;
 }
 
 .detail-operator.aktif-operator {
-  display: flex; /* Ubah ke flex agar kiri-kanan */
+  display: flex;
   flex-direction: row;
   gap: 30px;
   align-items: stretch;
@@ -669,7 +577,7 @@ footer {
 
 /* Bagian Kiri: Gambar PNG Vertikal */
 .op-image {
-  flex: 0 0 300px; /* Lebar gambar fix 300px */
+  flex: 0 0 300px;
   max-height: 450px;
   border-radius: 8px;
   overflow: hidden;
@@ -683,20 +591,20 @@ footer {
 .op-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Agar gambar PNG penuh dan tidak gepeng */
+  object-fit: cover;
   object-position: top;
 }
 
 /* Bagian Kanan: Teks Penjelasan */
 .op-text {
-  flex: 1; /* Mengisi sisa ruang */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .op-text h4 {
-  color: #ff3b3b; /* Warna merah menyala seperti di game */
+  color: #ff3b3b;
   font-size: 1.8em;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -731,56 +639,4 @@ footer {
   .op-image {
     flex: 0 0 250px;
   }
-}
-
-/* =========================================
-   SKILL LIST OPERATOR
-========================================= */
-.op-skills {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  background: #25252d;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border-left: 3px solid #3a3a44;
-}
-
-/* Warna khusus untuk tiap label skill */
-.skill-label {
-  flex: 0 0 110px; /* Lebar label tetap */
-  font-weight: bold;
-  font-size: 0.85em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding-top: 3px;
-}
-
-.skill-label.ultimate {
-  color: #f5a623;
-} /* Kuning Emas */
-.skill-label.gadget {
-  color: #4ade80;
-} /* Hijau */
-.skill-label.passive {
-  color: #60a5fa;
-} /* Biru */
-
-.skill-desc {
-  color: #d0ccc6;
-  font-size: 0.95em;
-  line-height: 1.5;
-}
-
-.skill-desc strong {
-  color: #e8e6e3;
-  display: block;
-  margin-bottom: 3px;
 }
