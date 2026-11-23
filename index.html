@@ -10,12 +10,12 @@
     <!-- HEADER -->
     <header>
       <h1>Delta Force</h1>
-      <p>Panduan Mode, Senjata, Operator & Recoil</p>
+      <p>kenalan sedikit yu,ada apa aja di df tuh</p>
     </header>
 
     <!-- ============================================
        HALAMAN AWAL: PILIH MODE
-  ============================================ -->
+    ============================================ -->
     <section class="halaman aktif" id="home">
       <div class="mode-menu">
         <h2>Pilih Mode Permainan</h2>
@@ -32,24 +32,9 @@
             <p>
               Mode ekstraksi taktis. Masuk ke medan tempur, kumpulkan loot, dan
               keluarkan diri dengan selamat. Fokus pada senjata, operator, dan
-              kontrol recoil.
+              kontrol recoil serta kerja sama team.
             </p>
-            <span class="badge">EKS TAKTIS</span>
-          </a>
-
-          <a
-            href="#"
-            class="mode-card warfare"
-            onclick="bukaMode('warfare'); return false;"
-          >
-            <span class="ikon">🚁</span>
-            <h3>WARFARE</h3>
-            <p>
-              Pertempuran skala besar dengan kendaraan. Tim besar, peta luas,
-              dan kendaraan tempur. Fokus pada senjata, kendaraan, dan kontrol
-              recoil.
-            </p>
-            <span class="badge">PERTEMPURAN BESAR</span>
+            <span class="badge">OPS TAKTIS</span>
           </a>
         </div>
       </div>
@@ -57,7 +42,7 @@
 
     <!-- ============================================
        HALAMAN: OPERATIONS
-  ============================================ -->
+    ============================================ -->
     <section class="halaman" id="halaman-ops">
       <div class="mode-header ops">
         <span class="ikon-besar">🎯</span>
@@ -88,15 +73,12 @@
         <div class="grid-senjata">
           <div class="kartu-senjata" onclick="bukaSenjata('ops', 'mk47')">
             <h3>MK47</h3>
-            <p>Damage tinggi, recoil sulit</p>
           </div>
-          <div class="kartu-senjata" onclick="bukaSenjata('ops', 'm4a1')">
-            <h3>M4A1</h3>
-            <p>Seimbang, cocok pemula</p>
+          <div class="kartu-senjata" onclick="bukaSenjata('ops', 'm7')">
+            <h3>M7</h3>
           </div>
-          <div class="kartu-senjata" onclick="bukaSenjata('ops', 'ak12')">
-            <h3>AK-12</h3>
-            <p>Recoil besar, damage besar</p>
+          <div class="kartu-senjata" onclick="bukaSenjata('ops', 'm14')">
+            <h3>M14</h3>
           </div>
         </div>
 
@@ -106,13 +88,16 @@
         <div id="detail-ops-mk47" class="detail-senjata">
           <h3>🔫 MK47 — Operations</h3>
 
+          <!-- Video Perbandingan -->
           <div class="perbandingan">
             <div class="item">
               <p class="label">🎬 No Gear</p>
               <div class="video-wrapper">
                 <video controls>
-                  <source src="ops-mk47-nogear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
+                  <source
+                    src="weapon ops/mk47/mk47 (no gear).mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
@@ -120,43 +105,33 @@
               <p class="label">🎬 Full Gear</p>
               <div class="video-wrapper">
                 <video controls>
-                  <source src="ops-mk47-fullgear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
+                  <source
+                    src="weapon ops/mk47/mk47 (full gear).mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
           </div>
 
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">📊 Pola No Gear</p>
-              <div class="png-wrapper">
-                <img src="ops-mk47-nogear.png" alt="Pola recoil MK47 No Gear" />
-              </div>
+          <!-- Pola Gabungan (Before & After) -->
+          <div class="png-gabungan-wrapper">
+            <div class="png-header">
+              <span class="before-teks">BEFORE (No Gear)</span>
+              <span class="after-teks">AFTER (Full Gear)</span>
             </div>
-            <div class="item">
-              <p class="label">📊 Pola Full Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="ops-mk47-fullgear.png"
-                  alt="Pola recoil MK47 Full Gear"
-                />
-              </div>
-            </div>
+            <!-- Pastikan file gambar ini ada di folder kamu -->
+            <img src="mk47 control.jpeg" alt="Pola Recoil MK47" />
           </div>
 
           <!-- Stat Box MK47 -->
           <div class="stat-box">
             <h4>📈 Stat MK47</h4>
-            <div class="stat-grid">
-              <!-- (Isi stat bar MK47 milikmu di sini jika ada) -->
-            </div>
+            <div class="stat-grid"></div>
 
-            <div class="stat-teks">
-              <!-- (Isi stat teks MK47 milikmu di sini jika ada) -->
-            </div>
+            <div class="stat-teks"></div>
 
-            <!-- KODE STAT-BANDING MK47 KAMU (TETAP UTUH) -->
+            <!-- KODE STAT-BANDING MK47 -->
             <div class="stat-banding">
               <h5>⚖️ Perbandingan: No Gear vs Full Gear</h5>
 
@@ -165,54 +140,50 @@
                 <div class="banding-item">
                   <span class="banding-nama">Damage</span>
                   <div class="banding-nilai">
-                    <span class="before">65</span>
+                    <span class="before">42</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">85</span>
+                    <span class="after naik">46</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Range</span>
                   <div class="banding-nilai">
-                    <span class="before">60</span>
-                    <span class="arrow">➔</span>
-                    <span class="after sama">60</span>
+                    <span class="before">30M</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Control</span>
                   <div class="banding-nilai">
-                    <span class="before">70</span>
+                    <span class="before">35</span>
                     <span class="arrow">➔</span>
-                    <span class="after turun">50</span>
+                    <span class="after naik">62</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Handling</span>
                   <div class="banding-nilai">
-                    <span class="before">45</span>
+                    <span class="before">55</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">65</span>
+                    <span class="after naik">58</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Stability</span>
                   <div class="banding-nilai">
-                    <span class="before">35</span>
+                    <span class="before">50</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">75</span>
+                    <span class="after naik">55</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Accuracy</span>
                   <div class="banding-nilai">
-                    <span class="before">80</span>
-                    <span class="arrow">➔</span>
-                    <span class="after turun">60</span>
+                    <span class="before">53</span>
                   </div>
                 </div>
               </div>
@@ -222,52 +193,48 @@
                 <div class="bteks-item">
                   <span>Armor Penetration</span>
                   <div>
-                    <span class="before">Lv 3</span>
-                    <span class="panah-naik">→</span>
-                    <strong class="after naik">Lv 4</strong>
+                    <span class="before">47</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Fire Rate</span>
                   <div>
-                    <span class="before">700 RPM</span>
-                    <span class="panah-turun">←</span>
-                    <strong class="after turun">600 RPM</strong>
+                    <span class="before">625 RPM</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Capacity</span>
                   <div>
-                    <span class="before">20 / 30</span>
+                    <span class="before">20</span>
                     <span class="panah-naik">→</span>
-                    <strong class="after naik">30 / 40</strong>
+                    <strong class="after naik">40</strong>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Mode</span>
                   <div>
-                    <span class="before">Semi</span>
-                    <span class="panah-naik">→</span>
-                    <strong class="after naik">Full Auto</strong>
+                    <span class="before">single/auto</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Muzzle Velocity</span>
                   <div>
-                    <span class="before">720 m/s</span>
-                    <strong class="after sama">720 m/s</strong>
+                    <span class="before">525 m/s</span>
+                    <span class="panah-naik">→</span>
+                    <strong class="after naik">675 m/s</strong>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Gunshot Sound</span>
                   <div>
-                    <span class="before">Loud (95 dB)</span>
-                    <strong class="after sama">Loud (95 dB)</strong>
+                    <span class="before">500m</span>
+                    <span class="panah-naik">→</span>
+                    <strong class="after naik">350 m</strong>
                   </div>
                 </div>
               </div>
@@ -279,18 +246,20 @@
         <!-- PENUTUP DETAIL MK47 -->
 
         <!-- ==========================================
-             DETAIL M4A1
+             DETAIL M7
         =========================================== -->
-        <div id="detail-ops-m4a1" class="detail-senjata">
-          <h3>🔫 M4A1 — Operations</h3>
+        <div id="detail-ops-m7" class="detail-senjata">
+          <h3>🔫 M7 — Operations</h3>
 
           <div class="perbandingan">
             <div class="item">
               <p class="label">🎬 No Gear</p>
               <div class="video-wrapper">
                 <video controls>
-                  <source src="ops-m4a1-nogear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
+                  <source
+                    src="weapon ops/m7/m7 (no gear).mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
@@ -298,177 +267,161 @@
               <p class="label">🎬 Full Gear</p>
               <div class="video-wrapper">
                 <video controls>
-                  <source src="ops-m4a1-fullgear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
+                  <source
+                    src="weapon ops/m7/m7 (full gear).mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
           </div>
 
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">📊 Pola No Gear</p>
-              <div class="png-wrapper">
-                <img src="ops-m4a1-nogear.png" alt="Pola recoil M4A1 No Gear" />
-              </div>
+          <!-- Pola Gabungan (Before & After) -->
+          <div class="png-gabungan-wrapper">
+            <div class="png-header">
+              <span class="before-teks">BEFORE (No Gear)</span>
+              <span class="after-teks">AFTER (Full Gear)</span>
             </div>
-            <div class="item">
-              <p class="label">📊 Pola Full Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="ops-m4a1-fullgear.png"
-                  alt="Pola recoil M4A1 Full Gear"
-                />
-              </div>
-            </div>
+            <img src="m7 control.jpeg" alt="Pola Recoil M7" />
           </div>
 
-          <!-- Stat Box M4A1 -->
+          <!-- Stat Box M7 -->
           <div class="stat-box">
-            <h4>📈 Stat M4A1</h4>
-            <div class="stat-grid">
-              <!-- (Isi stat bar M4A1 milikmu di sini jika ada) -->
-            </div>
+            <h4>📈 Stat M7</h4>
+            <div class="stat-grid"></div>
+            <div class="stat-teks"></div>
 
-            <div class="stat-teks">
-              <!-- (Isi stat teks M4A1 milikmu di sini jika ada) -->
-            </div>
-
-            <!-- KODE STAT-BANDING M4A1 (DITAMBAHKAN) -->
+            <!-- KODE STAT-BANDING M7 -->
             <div class="stat-banding">
               <h5>⚖️ Perbandingan: No Gear vs Full Gear</h5>
 
-              <!-- Stat Bar -->
               <div class="banding-grid">
                 <div class="banding-item">
                   <span class="banding-nama">Damage</span>
                   <div class="banding-nilai">
-                    <span class="before">65</span>
+                    <span class="before">37</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">85</span>
+                    <span class="after naik">39</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Range</span>
                   <div class="banding-nilai">
-                    <span class="before">60</span>
+                    <span class="before">50m</span>
                     <span class="arrow">➔</span>
-                    <span class="after sama">60</span>
+                    <span class="after sama">74m</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Control</span>
                   <div class="banding-nilai">
-                    <span class="before">70</span>
+                    <span class="before">34</span>
                     <span class="arrow">➔</span>
-                    <span class="after turun">50</span>
+                    <span class="after turun">56</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Handling</span>
                   <div class="banding-nilai">
-                    <span class="before">45</span>
+                    <span class="before">51</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">65</span>
+                    <span class="after turun">47</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Stability</span>
                   <div class="banding-nilai">
-                    <span class="before">35</span>
+                    <span class="before">58</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">75</span>
+                    <span class="after naik">60</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Accuracy</span>
                   <div class="banding-nilai">
-                    <span class="before">80</span>
+                    <span class="before">43</span>
                     <span class="arrow">➔</span>
-                    <span class="after turun">60</span>
+                    <span class="after turun">27</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Stat Teks -->
               <div class="banding-teks">
                 <div class="bteks-item">
                   <span>Armor Penetration</span>
                   <div>
-                    <span class="before">Lv 3</span>
-                    <span class="panah-naik">→</span>
-                    <strong class="after naik">Lv 4</strong>
+                    <span class="before">42</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Fire Rate</span>
                   <div>
-                    <span class="before">700 RPM</span>
-                    <span class="panah-turun">←</span>
-                    <strong class="after turun">600 RPM</strong>
+                    <span class="before">649 RPM</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Capacity</span>
                   <div>
-                    <span class="before">20 / 30</span>
+                    <span class="before">20</span>
                     <span class="panah-naik">→</span>
-                    <strong class="after naik">30 / 40</strong>
+                    <strong class="after naik">45</strong>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Mode</span>
                   <div>
-                    <span class="before">Semi</span>
-                    <span class="panah-naik">→</span>
-                    <strong class="after naik">Full Auto</strong>
+                    <span class="before">single / auto</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Muzzle Velocity</span>
                   <div>
-                    <span class="before">720 m/s</span>
-                    <strong class="after sama">720 m/s</strong>
+                    <span class="before">630 m/s</span>
+                    <span class="panah-naik">→</span>
+                    <strong class="after naik">1.016 m/s</strong>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Gunshot Sound</span>
                   <div>
-                    <span class="before">Loud (95 dB)</span>
-                    <strong class="after sama">Loud (95 dB)</strong>
+                    <span class="before">600m</span>
+                    <span class="panah-naik">→</span>
+                    <strong class="after naik">300m</strong>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- AKHIR STAT-BANDING M4A1 -->
+            <!-- AKHIR STAT-BANDING M7 -->
           </div>
-          <!-- PENUTUP STAT-BOX M4A1 -->
+          <!-- PENUTUP STAT-BOX M7 -->
         </div>
-        <!-- PENUTUP DETAIL M4A1 -->
+        <!-- PENUTUP DETAIL M7 -->
 
         <!-- ==========================================
-             DETAIL AK-12
+             DETAIL M14
         =========================================== -->
-        <div id="detail-ops-ak12" class="detail-senjata">
-          <h3>🔫 AK-12 — Operations</h3>
+        <div id="detail-ops-m14" class="detail-senjata">
+          <h3>🔫 M14 — Operations</h3>
 
           <div class="perbandingan">
             <div class="item">
               <p class="label">🎬 No Gear</p>
               <div class="video-wrapper">
                 <video controls>
-                  <source src="ops-ak12-nogear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
+                  <source
+                    src="weapon ops/m14/m14 (no gear).mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
@@ -476,141 +429,116 @@
               <p class="label">🎬 Full Gear</p>
               <div class="video-wrapper">
                 <video controls>
-                  <source src="ops-ak12-fullgear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
+                  <source
+                    src="weapon ops/m14/m14 (full gear).mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
             </div>
           </div>
 
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">📊 Pola No Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="ops-ak12-nogear.png"
-                  alt="Pola recoil AK-12 No Gear"
-                />
-              </div>
+          <!-- Pola Gabungan (Before & After) -->
+          <div class="png-gabungan-wrapper">
+            <div class="png-header">
+              <span class="before-teks">BEFORE (No Gear)</span>
+              <span class="after-teks">AFTER (Full Gear)</span>
             </div>
-            <div class="item">
-              <p class="label">📊 Pola Full Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="ops-ak12-fullgear.png"
-                  alt="Pola recoil AK-12 Full Gear"
-                />
-              </div>
-            </div>
+            <img src="m14 control.jpeg" alt="Pola Recoil M14" />
           </div>
 
-          <!-- Stat Box AK-12 -->
+          <!-- Stat Box M14 -->
           <div class="stat-box">
-            <h4>📈 Stat AK-12</h4>
-            <div class="stat-grid">
-              <!-- (Isi stat bar AK-12 milikmu di sini jika ada) -->
-            </div>
+            <h4>📈 Stat M14</h4>
+            <div class="stat-grid"></div>
+            <div class="stat-teks"></div>
 
-            <div class="stat-teks">
-              <!-- (Isi stat teks AK-12 milikmu di sini jika ada) -->
-            </div>
-
-            <!-- KODE STAT-BANDING AK-12 (DITAMBAHKAN) -->
+            <!-- KODE STAT-BANDING M14 -->
             <div class="stat-banding">
               <h5>⚖️ Perbandingan: No Gear vs Full Gear</h5>
 
-              <!-- Stat Bar -->
               <div class="banding-grid">
                 <div class="banding-item">
                   <span class="banding-nama">Damage</span>
                   <div class="banding-nilai">
-                    <span class="before">65</span>
-                    <span class="arrow">➔</span>
-                    <span class="after naik">85</span>
+                    <span class="before">39</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Range</span>
                   <div class="banding-nilai">
-                    <span class="before">60</span>
+                    <span class="before">40</span>
                     <span class="arrow">➔</span>
-                    <span class="after sama">60</span>
+                    <span class="after naik">54</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Control</span>
                   <div class="banding-nilai">
-                    <span class="before">70</span>
+                    <span class="before">26</span>
                     <span class="arrow">➔</span>
-                    <span class="after turun">50</span>
+                    <span class="after turun">39</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Handling</span>
                   <div class="banding-nilai">
-                    <span class="before">45</span>
+                    <span class="before">52</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">65</span>
+                    <span class="after naik">59</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Stability</span>
                   <div class="banding-nilai">
-                    <span class="before">35</span>
+                    <span class="before">55</span>
                     <span class="arrow">➔</span>
-                    <span class="after naik">75</span>
+                    <span class="after naik">59</span>
                   </div>
                 </div>
 
                 <div class="banding-item">
                   <span class="banding-nama">Accuracy</span>
                   <div class="banding-nilai">
-                    <span class="before">80</span>
+                    <span class="before">48</span>
                     <span class="arrow">➔</span>
-                    <span class="after turun">60</span>
+                    <span class="after turun">28</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Stat Teks -->
               <div class="banding-teks">
                 <div class="bteks-item">
                   <span>Armor Penetration</span>
                   <div>
-                    <span class="before">Lv 3</span>
-                    <span class="panah-naik">→</span>
-                    <strong class="after naik">Lv 4</strong>
+                    <span class="before">41</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Fire Rate</span>
                   <div>
-                    <span class="before">700 RPM</span>
-                    <span class="panah-turun">←</span>
-                    <strong class="after turun">600 RPM</strong>
+                    <span class="before">727 RPM</span>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Capacity</span>
                   <div>
-                    <span class="before">20 / 30</span>
+                    <span class="before">10</span>
                     <span class="panah-naik">→</span>
-                    <strong class="after naik">30 / 40</strong>
+                    <strong class="after naik">50</strong>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Mode</span>
                   <div>
-                    <span class="before">Semi</span>
-                    <span class="panah-naik">→</span>
-                    <strong class="after naik">Full Auto</strong>
+                    <span class="before">auto / single</span>
                   </div>
                 </div>
 
@@ -618,31 +546,31 @@
                   <span>Muzzle Velocity</span>
                   <div>
                     <span class="before">720 m/s</span>
-                    <strong class="after sama">720 m/s</strong>
                   </div>
                 </div>
 
                 <div class="bteks-item">
                   <span>Gunshot Sound</span>
                   <div>
-                    <span class="before">Loud (95 dB)</span>
-                    <strong class="after sama">Loud (95 dB)</strong>
+                    <span class="before">575 m/s</span>
+                    <span class="panah-naik">→</span>
+                    <strong class="after naik">852 m/s</strong>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- AKHIR STAT-BANDING AK-12 -->
+            <!-- AKHIR STAT-BANDING M14 -->
           </div>
-          <!-- PENUTUP STAT-BOX AK-12 -->
+          <!-- PENUTUP STAT-BOX M14 -->
         </div>
-        <!-- PENUTUP DETAIL AK-12 -->
+        <!-- PENUTUP DETAIL M14 -->
       </div>
       <!-- ===== BATAS AKHIR TAB OPS: SENJATA ===== -->
 
       <!-- ===== TAB OPS: OPERATOR ===== -->
       <div id="ops-operator" class="tab-konten">
-        <h2>👤 Operator di Operations</h2>
-        <p>Pilih operator untuk melihat profil, role, dan skill uniknya.</p>
+        <h2>👤 Operator</h2>
+        <p>Pilih operator untuk melihat skillnya.</p>
 
         <!-- Grid Kategori Operator -->
         <div class="grid-kategori-operator">
@@ -661,9 +589,6 @@
               </div>
               <div class="kartu-operator" onclick="bukaOperator('nox')">
                 Nox
-              </div>
-              <div class="kartu-operator" onclick="bukaOperator('martelo')">
-                Martelo
               </div>
             </div>
           </div>
@@ -733,20 +658,28 @@
         <!-- D-Wolf -->
         <div id="detail-op-d-wolf" class="detail-operator">
           <div class="op-image">
-            <img src="d-wolf.png" alt="D-Wolf" />
+            <img src="operator/d-wolf.jpg" alt="D-Wolf" />
           </div>
           <div class="op-text">
-            <h4>AUXILIARY SURGE SPINE</h4>
+            <h4>D-WOLF</h4>
             <div class="role">Assault Operator</div>
             <p>
-              <strong>Skill:</strong> Ketika ancaman peluru atau ledakan
-              mendekat, tim D-Wolf mengalami lonjakan adrenalin (buff). Ini
-              sangat meningkatkan kekuatan otot inti dan mempercepat kecepatan
-              lari.
+              <strong>MOTORIZED EXOSKELETON:</strong> Mengaktifkan exoskeleton
+              untuk meningkatkan kecepatan berlari. Melumpuhkan musuh selama
+              skill aktif dapat memulihkan HP dan memperpanjang durasi skill.
             </p>
             <p>
-              <strong>Passive:</strong> Kecepatan berenang meningkat dalam
-              kondisi normal.
+              <strong>TIRPLE BLASTER:</strong> Menembakkan granat berdaya ledak
+              tinggi menggunakan peluncur khusus. Granat dapat menempel pada
+              kendaraan ketika mengenai sasaran.
+            </p>
+            <p>
+              <strong>TACTICAL SMOKE GRENADE:</strong> Melemparkan granat asap
+              ringan yang menghasilkan asap sementara ketika mengenai permukaan.
+            </p>
+            <p>
+              <strong>TACTICAL SLIDE:</strong> Memanfaatkan exoskeleton untuk
+              melakukan gerakan meluncur secara cepat.
             </p>
           </div>
         </div>
@@ -754,15 +687,28 @@
         <!-- Vyron -->
         <div id="detail-op-vyron" class="detail-operator">
           <div class="op-image">
-            <img src="vyron.png" alt="Vyron" />
+            <img src="operator/vyron.jpg" alt="Vyron" />
           </div>
           <div class="op-text">
-            <h4>ROCKET LAUNCHER</h4>
+            <h4>VYRON</h4>
             <div class="role">Assault Operator</div>
             <p>
-              <strong>Skill:</strong> Menghancurkan pertahanan musuh menggunakan
-              roket peluncur. Sangat efektif untuk menghancurkan tembok atau
-              cover musuh.
+              <strong>QLL32 CROUCHING TIGER:</strong> Peluncur yang dipanggul di
+              bahu, menembakkan proyektil bertekanan udara, dan mampu
+              melumpuhkan musuh di area jangkauannya secara seketika.
+            </p>
+            <p>
+              <strong>DYNAMIC PROPULSION:</strong> Menggunakan perangkat
+              pendorong untuk membantu pergerakan secara cepat.
+            </p>
+            <p>
+              <strong>MAGNETIC BOMB:</strong> Melemparkan bom magnetis yang
+              dapat menempel pada permukaan atau sasaran tertentu.
+            </p>
+            <p>
+              <strong>DYNAMIC AUXILIARY DEVICE:</strong> Mengaktifkan perangkat
+              tambahan untuk bergerak cepat ke arah yang telah ditentukan.
+              Berhasil melumpuhkan musuh akan mengurangi waktu pemulihan skill.
             </p>
           </div>
         </div>
@@ -770,110 +716,254 @@
         <!-- Tempest -->
         <div id="detail-op-tempest" class="detail-operator">
           <div class="op-image">
-            <img src="tempest.png" alt="Tempest" />
+            <img src="operator/tempest.jpg" alt="Tempest" />
           </div>
           <div class="op-text">
             <h4>TEMPEST</h4>
             <div class="role">Assault Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Tempest di sini)</p>
+            <p>
+              <strong>Emergency Evasion Device:</strong> Menempatkan jangkar
+              pengaman yang dapat ditarik kembali oleh Tempest. Jika aktif, itu
+              juga bisa memberinya penyelamatan diri setelah kerusakan fatal.
+            </p>
+            <p>
+              <strong>Combat Roll:</strong> Memungkinkan Tempest berguling ke
+              berbagai arah dan dengan cepat mengubah posisi sambil menjaga
+              kecepatannya tetap tinggi.
+            </p>
+            <p>
+              <strong>Drill Charge:</strong> Melemparkan bor melalui penutup,
+              kemudian melepaskan semburan listrik yang mengejutkan,
+              melumpuhkan, dan melucuti senjata musuh di belakangnya.
+            </p>
+            <p>
+              <strong>Auxiliary Surge Spine:</strong> Meningkatkan kecepatan
+              gerakan saat Tempest diserang dan juga meningkatkan mobilitasnya
+              di air.
+            </p>
           </div>
         </div>
 
         <!-- Nox -->
         <div id="detail-op-nox" class="detail-operator">
           <div class="op-image">
-            <img src="nox.png" alt="Nox" />
+            <img src="operator/nox.jpg" alt="Nox" />
           </div>
           <div class="op-text">
             <h4>NOX</h4>
             <div class="role">Assault Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Nox di sini)</p>
-          </div>
-        </div>
-
-        <!-- Martelo -->
-        <div id="detail-op-martelo" class="detail-operator">
-          <div class="op-image">
-            <img src="martelo.png" alt="Martelo" />
-          </div>
-          <div class="op-text">
-            <h4>MARTELO</h4>
-            <div class="role">Assault Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Martelo di sini)</p>
+            <p>
+              <strong>Silent Assaulte:</strong> Mengaktifkan pengganggu yang
+              mengurangi emisi suara Nox, meningkatkan kecepatan gerakan, dan
+              mengganggu musuh di dekatnya. Dalam Warfare, hal itu membuatnya
+              tidak terdeteksi, sedangkan dalam Operasi, alat pengintaian hanya
+              mendeteksi titik awal.
+            </p>
+            <p>
+              <strong>whirlwind disc:</strong> Melemparkan alat pelacak yang
+              mengunci target terdekat, meledak, menimbulkan kerusakan,
+              menimbulkan luka, dan memperlambat musuh. Ini mengunci lebih cepat
+              ketika menyerang dari belakang.
+            </p>
+            <p>
+              <strong>Tactical Flashbang:</strong> Sebuah flashbang yang meledak
+              pada kontak, membutakan dan musuh yang menakjubkan di daerah
+              tersebut. Ini bagus untuk membersihkan ruangan, entri cepat, dan
+              memaksa pemain bertahan untuk kehilangan tembakan pertama.
+            </p>
+            <p>
+              <strong>deep trauma:</strong> Deep Trauma membuat musuh pulih
+              lebih lambat setelah menerima kerusakan dari Nox serta butuh waktu
+              lebih lama untuk bangkit kembali,
+            </p>
           </div>
         </div>
 
         <!-- Stinger -->
         <div id="detail-op-stinger" class="detail-operator">
           <div class="op-image">
-            <img src="stinger.png" alt="Stinger" />
+            <img src="operator/stinger.jpg" alt="Stinger" />
           </div>
           <div class="op-text">
             <h4>STINGER</h4>
             <div class="role">Support Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Stinger di sini)</p>
+            <p>
+              <strong>Hive-Tech Pistol:</strong> Pistol penyembuhan yang
+              menembakkan tembakan pelacakan ke sekutu, memungkinkan Anda
+              memulihkan kesehatan dengan cepat tanpa merusak kecepatan tim
+              Anda.
+            </p>
+            <p>
+              <strong>Smokescreen Drone:</strong> Drone yang dapat dikendalikan
+              yang meninggalkan jejak asap saat bergerak. Ini bagus untuk
+              melintasi ruang terbuka, menutupi kebangkitan, atau memotong garis
+              pandang musuh sebelum mendorong.
+            </p>
+            <p>
+              <strong>Hive-Tech Smoke Grenade:</strong> Granat asap penyembuhan
+              yang menciptakan perlindungan dan membantu memulihkan sekutu
+              terdekat di dalam awan, memberi tim Anda kekuatan ekstra untuk
+              bertahan selama perkelahian yang berantakan.
+            </p>
+            <p>
+              <strong>Trait:</strong> Menghilangkan efek negatif yang
+              mengurangin maks hp dan memberi sedikit healing saat dibangkitkan
+            </p>
           </div>
         </div>
 
         <!-- Toxik -->
         <div id="detail-op-toxik" class="detail-operator">
           <div class="op-image">
-            <img src="toxik.png" alt="Toxik" />
+            <img src="operator/toxik.jpg" alt="Toxik" />
           </div>
           <div class="op-text">
             <h4>TOXIK</h4>
             <div class="role">Support Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Toxik di sini)</p>
+            <p>
+              <strong>Dragonfly Swarm System:</strong> Meluncurkan kawanan drone
+              yang mengganggu musuh dan membantu menciptakan tekanan selama
+              pertarungan tim jarak dekat dan dorongan agresif.
+            </p>
+            <p>
+              <strong>Adreno-Boost:</strong> Menerapkan buff adrenalin ke sekutu
+              terdekat, meningkatkan penanganan dan mengurangi gentar sehingga
+              tim Anda dapat mengambil perkelahian yang lebih bersih.
+            </p>
+            <p>
+              <strong>Blinding Gas:</strong> Melemparkan granat gas yang
+              membutakan musuh di dalam awan, sehingga berguna untuk mematahkan
+              sudut, memaksa gerakan, atau menutupi dorongan.
+            </p>
+            <p>
+              <strong>Swift Healing:</strong> membantu rekan satu tim terdekat
+              pulih lebih cepat. Dalam Warfare, hal ini mempersingkat penundaan
+              pemulihan kesehatan, sementara dalam Operasi mengurangi waktu
+              penggunaan yang dapat dikonsumsi.
+            </p>
           </div>
         </div>
 
         <!-- Rover -->
         <div id="detail-op-rover" class="detail-operator">
           <div class="op-image">
-            <img src="rover.png" alt="Rover" />
+            <img src="operator/Rover.PNG" alt="Rover" />
           </div>
           <div class="op-text">
             <h4>ROVER</h4>
             <div class="role">Support Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Rover di sini)</p>
+            <p>
+              <strong>Man’s Best Friend:</strong> Memanggil Clover untuk
+              mendeteksi, mengejar, mengatasi, dan menandai musuh di dekatnya.
+            </p>
+            <p>
+              <strong>Dart Rifle:</strong> Menciptakan kabut yang merusak musuh
+              dan mengurangi HP maksimum mereka. Ini menyembuhkan anggota tubuh
+              sekutu yang terluka dalam Operasi.
+            </p>
+            <p>
+              <strong>Irritant Smoke Grenade:</strong> Menciptakan asap yang
+              membuat musuh yang terkena batuk dan mengungkapkan kehadiran
+              mereka.
+            </p>
+            <p>
+              <strong>Guard Drive / Prey Drive:</strong> Meningkatkan pelacakan
+              Clover dan menambahkan bonus penyelamatan khusus mode.
+            </p>
           </div>
         </div>
 
         <!-- Vlinder -->
         <div id="detail-op-vlinder" class="detail-operator">
           <div class="op-image">
-            <img src="vlinder.png" alt="Vlinder" />
+            <img src="operator/vlinder.jpg" alt="Vlinder" />
           </div>
           <div class="op-text">
             <h4>VLINDER</h4>
             <div class="role">Support Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Vlinder di sini)</p>
+            <p>
+              <strong>Flutter Rescue UAVs:</strong> Menyebarkan UAV penyelamat
+              yang secara otomatis terbang ke sekutu terdekat dan menyuntikkan
+              mereka dengan plasma. Setelah itu, Anda dapat bergerak masuk dan
+              menyelesaikan penyelamatan dengan defibrilator.
+            </p>
+            <p>
+              <strong>Med Drones:</strong> Menyebarkan drone medis yang mengunci
+              rekan satu regu, mengikuti mereka untuk waktu yang singkat, dan
+              menyembuhkan sekutu terdekat selama dorongan.
+            </p>
+            <p>
+              <strong>Windmill Smoke Grenade:</strong> Granat asap yang dapat
+              dikemudikan yang memungkinkan Anda membentuk penutup dengan lebih
+              hati-hati daripada lemparan biasa.
+            </p>
+            <p>
+              <strong>BIO SCANE:</strong> Bio Scan meningkatkan nilai pemulihan
+              tim, memperpanjang kelangsungan hidup skuad dalam Operasi, dan
+              memberi Vlinder kesadaran yang lebih baik tentang kesehatan skuad
+              saat mendukung.
+            </p>
           </div>
         </div>
 
         <!-- Shepherd -->
         <div id="detail-op-shepherd" class="detail-operator">
           <div class="op-image">
-            <img src="shepherd.png" alt="Shepherd" />
+            <img src="operator/shepherd.jpg" alt="Shepherd" />
           </div>
           <div class="op-text">
             <h4>SHEPHERD</h4>
             <div class="role">Engineer Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Shepherd di sini)</p>
+            <p>
+              <strong>Sonic Paralysis:</strong> Menyebarkan Drone Sonic di depan
+              untuk menekan musuh dan mengurangi laju tembakan mereka melalui
+              tekanan akustik.
+            </p>
+            <p>
+              <strong>sonic trap:</strong> Perangkap sonik kompak yang menghukum
+              dorongan musuh dan membantu mengunci rute dan sudut yang sempit.
+            </p>
+            <p>
+              <strong>Frag Grenade:</strong> Menambah tekanan langsung ketika
+              musuh terjebak dalam perangkap atau ragu-ragu saat mendorong.
+            </p>
+            <p>
+              <strong>sonic defend:</strong> Pengaturan sonik Shepherd juga
+              membantu mengurangi tekanan ledakan di dekatnya, membuat pegangan
+              pertahanannya lebih sulit untuk dipatahkan.
+            </p>
           </div>
         </div>
 
         <!-- Uluru -->
         <div id="detail-op-uluru" class="detail-operator">
           <div class="op-image">
-            <img src="uluru.png" alt="Uluru" />
+            <img src="operator/uluru.jpg" alt="Uluru" />
           </div>
           <div class="op-text">
             <h4>SENTRY GUN</h4>
             <div class="role">Engineer Operator</div>
             <p>
-              <strong>Skill:</strong> Memasang menara otomatis (Sentry Gun) yang
-              menembak musuh secara otomatis.
+              <strong>Loitering Munition:</strong> Alat serangan eksplosif
+              terpandu yang memberi tekanan pada musuh pada jarak dekat,
+              menengah, atau lebih jauh dan bekerja paling baik saat Anda ingin
+              mematahkan formasi atau memaksa gerakan.
+            </p>
+            <p>
+              <strong>Quickset Cover:</strong>Menyebarkan penghalang beton yang
+              cepat terbentuk yang memberikan penutup sementara instan, membantu
+              Uluru dan rekan satu timnya mendorong, mengatur ulang, atau
+              menahan sudut yang berbahaya.
+            </p>
+
+            <p>
+              <strong>Composite Incendiary:</strong> Granat pembakar yang
+              menciptakan zona pembakaran berbahaya, menghukum perlindungan
+              musuh, dan membantu menolak ruang selama dorongan atau pertahanan.
+            </p>
+            <p>
+              <strong>Battle Hardened:</strong> Battle Hardened memberi Uluru
+              ketahanan yang lebih baik terhadap efek perlambatan.
             </p>
           </div>
         </div>
@@ -881,90 +971,230 @@
         <!-- Gizmo -->
         <div id="detail-op-gizmo" class="detail-operator">
           <div class="op-image">
-            <img src="gizmo.png" alt="Gizmo" />
+            <img src="operator/gizmo.jpg" alt="Gizmo" />
           </div>
           <div class="op-text">
             <h4>GIZMO</h4>
             <div class="role">Engineer Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Gizmo di sini)</p>
+            <p>
+              <strong>T.I.M.:</strong> Melemparkan modul intersepsi
+              self-propelled yang berpatroli ke depan, memburu musuh, dan
+              menembakkan jaring penahan yang membatasi pergerakan, memblokir
+              ADS, dan menonaktifkan gadget.
+            </p>
+            <p>
+              <strong>Crawler Nest:</strong> Menyebarkan sarang dengan tiga
+              perayap mekanis. Mereka melacak musuh di dekatnya, meledak saat
+              bersentuhan, dan menerapkan Korosi, yang meningkatkan kerusakan
+              akibat peluru.
+            </p>
+            <p>
+              <strong>Smoke Mine:</strong> Menempatkan asap pintar pada
+              permukaan yang keras. Ini aktif ketika musuh mendekat,
+              memperlambat siapa pun di dalam, dan menandai target Corroded
+              dalam asap.
+            </p>
+            <p>
+              <strong>Firewall improves :</strong> Firewall meningkatkan
+              penanganan senjata Gizmo ketika dia tetap dekat dengan
+              deployables-nya, yang membuatnya jauh lebih kuat sambil memegang
+              pengaturannya sendiri.
+            </p>
           </div>
         </div>
 
         <!-- Sineva -->
         <div id="detail-op-sineva" class="detail-operator">
           <div class="op-image">
-            <img src="sineva.png" alt="Sineva" />
+            <img src="operator/sineva.jpg" alt="Sineva" />
           </div>
           <div class="op-text">
             <h4>SINEVA</h4>
             <div class="role">Engineer Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Sineva di sini)</p>
+            <p>
+              <strong>EOD Set:</strong> Pengaturan perisai berat yang dibuat
+              untuk garis depan, menghalangi tekanan, dan membuat dorongan jarak
+              dekat lebih sulit dihentikan.
+            </p>
+            <p>
+              <strong>Grapple Gun:</strong> Menarik musuh, sekutu yang jatuh,
+              atau kotak, memberikan Sineva kegunaan yang kuat dalam pertarungan
+              ketat dan situasi penyelamatan.
+            </p>
+
+            <p>
+              <strong>Razor Wire Grenade:</strong> Meledak menjadi kawat silet
+              yang memperlambat musuh, memberikan kerusakan, dan menciptakan
+              suara saat pemain melewatinya.
+            </p>
+            <p>
+              <strong>Rear Protection:</strong> Perlindungan Belakang memberi
+              Sineva perlindungan ekstra dari belakang ketika perisai tidak
+              aktif dipasang, membuat kontrol depan-ke-belakang semakin kuat.
+            </p>
           </div>
         </div>
 
         <!-- N-Tow -->
         <div id="detail-op-n-tow" class="detail-operator">
           <div class="op-image">
-            <img src="n-tow.png" alt="N-Tow" />
+            <img src="operator/n-two.jpg" alt="N-Tow" />
           </div>
           <div class="op-text">
             <h4>N-TOW</h4>
             <div class="role">Engineer Operator</div>
-            <p><strong>Skill:</strong> (Isi skill N-Tow di sini)</p>
+            <p>
+              <strong>Frost Launcher:</strong> Melengkapi peluncur yang
+              menembakkan hingga enam granat kriogenik. Ledakan menimbulkan
+              kerusakan dan menerapkan efek cryo
+            </p>
+            <p>
+              <strong>Cryo-Flask:</strong> Melemparkan labu yang menciptakan
+              zona suhu rendah saat terjadi benturan. Musuh di dalam menderita
+              efek dingin dan batuk.
+            </p>
+
+            <p>
+              <strong>Homing Stun Grenade:</strong> Melemparkan granat setrum
+              pelacakan otomatis yang mengganggu penglihatan musuh dan
+              menimbulkan kerusakan.
+            </p>
+            <p>
+              <strong>Frostbite:</strong> melambatkan dan dapat membekukan
+              musuh.
+            </p>
           </div>
         </div>
 
         <!-- Luna -->
         <div id="detail-op-luna" class="detail-operator">
           <div class="op-image">
-            <img src="luna.png" alt="Luna" />
+            <img src="operator/luna.jpg" alt="Luna" />
           </div>
           <div class="op-text">
             <h4>LUNA</h4>
             <div class="role">Recon Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Luna di sini)</p>
+            <p>
+              <strong>Detection Arrow:</strong> Menembakkan panah pemindaian
+              yang mengungkapkan musuh yang bergerak di sepanjang jalurnya,
+              menjadikannya alat yang kuat untuk memeriksa rute, titik tersedak,
+              dan posisi tersembunyi.
+            </p>
+            <p>
+              <strong>Volt Arrow:</strong> Meluncurkan panah listrik yang
+              mengejutkan musuh di dekat titik tumbukan. Ini bagus untuk memaksa
+              pemain keluar dari perlindungan dan mengganggu pengaturan
+              pertahanan.
+            </p>
+            <p>
+              <strong>GE2 Frag Grenade:</strong> Granat sederhana namun efektif
+              untuk menyelesaikan musuh yang ditandai, membersihkan sudut, atau
+              menambah tekanan setelah pemindaian.
+            </p>
+            <p>
+              <strong>reveal enemies:</strong> Pasif Luna membantu mengungkapkan
+              musuh ketika dia hit
+            </p>
           </div>
         </div>
 
         <!-- Raptor -->
         <div id="detail-op-raptor" class="detail-operator">
           <div class="op-image">
-            <img src="raptor.png" alt="Raptor" />
+            <img src="operator/raptor.png" alt="Raptor" />
           </div>
           <div class="op-text">
             <h4>RAPTOR</h4>
             <div class="role">Recon Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Raptor di sini)</p>
+            <p>
+              <strong>Wing Cam:</strong> Kamera mata-mata yang menempel pada
+              musuh dan terus melakukan ping pada posisinya. Ini bagus untuk
+              melacak target berbahaya, menonton rotasi, dan menjaga tekanan
+              pada pemain yang mencoba untuk mundur.
+            </p>
+            <p>
+              <strong>Silver Wing:</strong> Drone yang dikendalikan secara
+              manual yang mengintai area yang luas, menandai musuh, dan dapat
+              membantu menerapkan tekanan pelacakan yang lebih besar lagi selama
+              dorongan atau rotasi.
+            </p>
+            <p>
+              <strong>Granat EMP:</strong>Sebuah granat gangguan yang
+              menonaktifkan elektronik musuh dan mengganggu beberapa lampiran
+              dan pemandangan.
+            </p>
+            <p>
+              <strong>Trace Trackere:</strong> memungkinkan Raptor mengumpulkan
+              intel dari jejak kaki musuh dan membuka kontainer
+            </p>
           </div>
         </div>
 
         <!-- Hackclaw -->
         <div id="detail-op-hackclaw" class="detail-operator">
           <div class="op-image">
-            <img src="hackclaw.png" alt="Hackclaw" />
+            <img src="operator/hackclaw.jpg" alt="Hackclaw" />
           </div>
           <div class="op-text">
             <h4>HACKCLAW</h4>
             <div class="role">Recon Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Hackclaw di sini)</p>
+            <p>
+              <strong>Dekoder Sinyal:</strong> Memindai musuh terdekat dan
+              membantu Hackclaw mengumpulkan intel jarak dekat sebelum melakukan
+              perlawanan atau mendorong ke area berisiko.
+            </p>
+            <p>
+              <strong>Flash drone:</strong> Drone yang terbang ke depan dan
+              membutakan musuh, memberi Hackclaw cara yang bersih untuk memulai
+              perkelahian atau memaksa pemain keluar dari suatu sudut.
+            </p>
+            <p>
+              <strong>Data Knife:</strong> Pisau yang dapat dibuang yang
+              menonaktifkan perangkat elektronik di dekatnya saat terjadi
+              benturan dan menimbulkan kerusakan parah jika terkena serangan
+              langsung, sehingga berguna untuk sabotase dan pengambilan.
+            </p>
+            <p>
+              <strong>slint step:</strong> mengurangi kebisingan langkah kaki
+              dan meningkatkan gerakan saat berjongkok atau bergerak secara
+              sembunyi-sembunyi (hold step)
+            </p>
           </div>
         </div>
 
         <!-- Morse -->
         <div id="detail-op-morse" class="detail-operator">
           <div class="op-image">
-            <img src="morse.png" alt="Morse" />
+            <img src="operator/morse.png" alt="Morse" />
           </div>
           <div class="op-text">
             <h4>MORSE</h4>
             <div class="role">Recon Operator</div>
-            <p><strong>Skill:</strong> (Isi skill Morse di sini)</p>
+            <p>
+              <strong>Advanced Sonar Device:</strong> Menyebarkan detektor yang
+              memindai suatu area, menghitung musuh di dalamnya, dan secara
+              tepat menandai target yang mengeluarkan suara.
+            </p>
+            <p>
+              <strong>Throwable Jammer:</strong> Pengganggu resonansi yang
+              memperlambat musuh, mengaburkan penglihatan, melemahkan belokan,
+              mengurangi pendengaran, dan mengisi area dengan gangguan suara
+            </p>
+            <p>
+              <strong>Delayed Flashbang:</strong> Sebuah flashbang dengan
+              ledakan tertunda yang membutakan musuh yang menghadapi ledakan.
+            </p>
+            <p>
+              <strong>sonar sense / sitrep:</strong> Morse memperoleh kesadaran
+              pendengaran yang lebih kuat melalui Sonic Sense,jika ada musuh
+              melakukan tembakan maka terlihat di map dalam radius sekitar 90m.
+            </p>
           </div>
         </div>
       </div>
-      <!-- ^^^ TAMBAHKAN INI: Penutup untuk div id="ops-operator" ^^^ -->
+      <!-- ===== BATAS AKHIR TAB OPS: OPERATOR ===== -->
 
-      <!-- TOMBOL KEMBALI (Harus di luar tab) -->
+      <!-- TOMBOL KEMBALI -->
       <div class="tombol-home">
         <button class="kembali" onclick="bukaHome()">
           ← Kembali ke Pilih Mode
@@ -973,718 +1203,12 @@
     </section>
     <!-- ^^^ Penutup untuk section id="halaman-ops" ^^^ -->
 
-    <!-- ============================================
-       HALAMAN: WARFARE
-  ============================================ -->
-    <!-- ============================================
-       HALAMAN: WARFARE
-  ============================================ -->
-    <section class="halaman" id="halaman-warfare">
-      <div class="mode-header warfare">
-        <span class="ikon-besar">🚁</span>
-        <h2>WARFARE</h2>
-        <p>
-          Pertempuran skala besar dengan kendaraan. Pilih sub-topik di bawah
-          untuk panduan senjata dan kendaraan.
-        </p>
-      </div>
-
-      <div class="sub-menu">
-        <button class="sub-tombol" onclick="bukaTab('warfare', 'senjata')">
-          🔫 Senjata
-        </button>
-        <button class="sub-tombol" onclick="bukaTab('warfare', 'kendaraan')">
-          🚙 Kendaraan
-        </button>
-      </div>
-
-      <!-- ===== TAB WAR: SENJATA ===== -->
-      <div id="warfare-senjata" class="tab-konten">
-        <h2>🔫 Senjata di Warfare</h2>
-        <p>
-          Klik senjata untuk melihat perbandingan
-          <strong>No Gear vs Full Gear</strong> + stat lengkap.
-        </p>
-
-        <div class="grid-senjata">
-          <div class="kartu-senjata" onclick="bukaSenjata('warfare', 'ar')">
-            <h3>Assault Rifle</h3>
-            <p>Serbaguna</p>
-          </div>
-          <div class="kartu-senjata" onclick="bukaSenjata('warfare', 'sniper')">
-            <h3>Sniper</h3>
-            <p>Jarak jauh</p>
-          </div>
-          <div class="kartu-senjata" onclick="bukaSenjata('warfare', 'smg')">
-            <h3>SMG</h3>
-            <p>Jarak dekat, mobilitas tinggi</p>
-          </div>
-        </div>
-
-        <!-- ===== DETAIL AR ===== -->
-        <div id="detail-warfare-ar" class="detail-senjata">
-          <h3>🔫 Assault Rifle — Warfare</h3>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">🎬 No Gear</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-ar-nogear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">🎬 Full Gear</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-ar-fullgear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-          </div>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">📊 Pola No Gear</p>
-              <div class="png-wrapper">
-                <img src="warfare-ar-nogear.png" alt="Pola recoil AR No Gear" />
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">📊 Pola Full Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="warfare-ar-fullgear.png"
-                  alt="Pola recoil AR Full Gear"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-box">
-            <h4>📈 Stat Assault Rifle</h4>
-            <div class="stat-grid">
-              <div class="stat-item">
-                <span class="stat-nama">Damage</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 70%"></div>
-                </div>
-                <span class="stat-angka">70</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Range</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 65%"></div>
-                </div>
-                <span class="stat-angka">65</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Control</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 65%"></div>
-                </div>
-                <span class="stat-angka">65</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Handling</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 60%"></div>
-                </div>
-                <span class="stat-angka">60</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Stability</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 70%"></div>
-                </div>
-                <span class="stat-angka">70</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Accuracy</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 70%"></div>
-                </div>
-                <span class="stat-angka">70</span>
-              </div>
-            </div>
-
-            <div class="stat-teks">
-              <div class="teks-item">
-                <span>Armor Penetration</span><strong>Level 3</strong>
-              </div>
-              <div class="teks-item">
-                <span>Fire Rate</span><strong>750 RPM</strong>
-              </div>
-              <div class="teks-item">
-                <span>Capacity</span><strong>30 / 40</strong>
-              </div>
-              <div class="teks-item">
-                <span>Mode</span><strong>Full Auto / Semi</strong>
-              </div>
-              <div class="teks-item">
-                <span>Muzzle Velocity</span><strong>840 m/s</strong>
-              </div>
-              <div class="teks-item">
-                <span>Gunshot Sound</span><strong>Medium (85 dB)</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ===== DETAIL SNIPER ===== -->
-        <div id="detail-warfare-sniper" class="detail-senjata">
-          <h3>🔫 Sniper — Warfare</h3>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">🎬 No Gear</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-sniper-nogear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">🎬 Full Gear</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-sniper-fullgear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-          </div>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">📊 Pola No Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="warfare-sniper-nogear.png"
-                  alt="Pola recoil Sniper No Gear"
-                />
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">📊 Pola Full Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="warfare-sniper-fullgear.png"
-                  alt="Pola recoil Sniper Full Gear"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-box">
-            <h4>📈 Stat Sniper</h4>
-            <div class="stat-grid">
-              <div class="stat-item">
-                <span class="stat-nama">Damage</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 100%"></div>
-                </div>
-                <span class="stat-angka">100</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Range</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 100%"></div>
-                </div>
-                <span class="stat-angka">100</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Control</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 30%"></div>
-                </div>
-                <span class="stat-angka">30</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Handling</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 35%"></div>
-                </div>
-                <span class="stat-angka">35</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Stability</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 40%"></div>
-                </div>
-                <span class="stat-angka">40</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Accuracy</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 95%"></div>
-                </div>
-                <span class="stat-angka">95</span>
-              </div>
-            </div>
-
-            <div class="stat-teks">
-              <div class="teks-item">
-                <span>Armor Penetration</span><strong>Level 6</strong>
-              </div>
-              <div class="teks-item">
-                <span>Fire Rate</span><strong>50 RPM</strong>
-              </div>
-              <div class="teks-item">
-                <span>Capacity</span><strong>5 / 10</strong>
-              </div>
-              <div class="teks-item">
-                <span>Mode</span><strong>Bolt Action</strong>
-              </div>
-              <div class="teks-item">
-                <span>Muzzle Velocity</span><strong>1200 m/s</strong>
-              </div>
-              <div class="teks-item">
-                <span>Gunshot Sound</span><strong>Very Loud (110 dB)</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ===== DETAIL SMG ===== -->
-        <div id="detail-warfare-smg" class="detail-senjata">
-          <h3>🔫 SMG — Warfare</h3>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">🎬 No Gear</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-smg-nogear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">🎬 Full Gear</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-smg-fullgear.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-          </div>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">📊 Pola No Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="warfare-smg-nogear.png"
-                  alt="Pola recoil SMG No Gear"
-                />
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">📊 Pola Full Gear</p>
-              <div class="png-wrapper">
-                <img
-                  src="warfare-smg-fullgear.png"
-                  alt="Pola recoil SMG Full Gear"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-box">
-            <h4>📈 Stat SMG</h4>
-            <div class="stat-grid">
-              <div class="stat-item">
-                <span class="stat-nama">Damage</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 55%"></div>
-                </div>
-                <span class="stat-angka">55</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Range</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 35%"></div>
-                </div>
-                <span class="stat-angka">35</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Control</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 70%"></div>
-                </div>
-                <span class="stat-angka">70</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Handling</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 85%"></div>
-                </div>
-                <span class="stat-angka">85</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Stability</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 65%"></div>
-                </div>
-                <span class="stat-angka">65</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Accuracy</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 50%"></div>
-                </div>
-                <span class="stat-angka">50</span>
-              </div>
-            </div>
-
-            <div class="stat-teks">
-              <div class="teks-item">
-                <span>Armor Penetration</span><strong>Level 2</strong>
-              </div>
-              <div class="teks-item">
-                <span>Fire Rate</span><strong>950 RPM</strong>
-              </div>
-              <div class="teks-item">
-                <span>Capacity</span><strong>40 / 50</strong>
-              </div>
-              <div class="teks-item">
-                <span>Mode</span><strong>Full Auto / Semi</strong>
-              </div>
-              <div class="teks-item">
-                <span>Muzzle Velocity</span><strong>600 m/s</strong>
-              </div>
-              <div class="teks-item">
-                <span>Gunshot Sound</span><strong>Quiet (75 dB)</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===== TAB WAR: KENDARAAN ===== -->
-      <div id="warfare-kendaraan" class="tab-konten">
-        <h2>🚙 Kendaraan di Warfare</h2>
-        <p>Klik kendaraan untuk melihat stat dan gambarnya.</p>
-
-        <div class="grid-senjata">
-          <div class="kartu-senjata" onclick="bukaSenjata('warfare', 'tank')">
-            <h3>Tank</h3>
-            <p>Pertahanan tinggi, damage besar</p>
-          </div>
-          <div
-            class="kartu-senjata"
-            onclick="bukaSenjata('warfare', 'helikopter')"
-          >
-            <h3>Helikopter</h3>
-            <p>Serangan udara</p>
-          </div>
-          <div
-            class="kartu-senjata"
-            onclick="bukaSenjata('warfare', 'kendaraan-ringan')"
-          >
-            <h3>Kendaraan Ringan</h3>
-            <p>Mobilitas cepat</p>
-          </div>
-        </div>
-
-        <!-- ===== DETAIL TANK ===== -->
-        <div id="detail-warfare-tank" class="detail-senjata">
-          <h3>🚙 Tank — Warfare</h3>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">🎬 Video</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-tank.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">📊 Gambar</p>
-              <div class="png-wrapper">
-                <img src="warfare-tank.png" alt="Tank" />
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-box">
-            <h4>📈 Stat Tank</h4>
-            <div class="stat-grid">
-              <div class="stat-item">
-                <span class="stat-nama">Damage</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 95%"></div>
-                </div>
-                <span class="stat-angka">95</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Range</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 80%"></div>
-                </div>
-                <span class="stat-angka">80</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Control</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 40%"></div>
-                </div>
-                <span class="stat-angka">40</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Handling</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 35%"></div>
-                </div>
-                <span class="stat-angka">35</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Stability</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 90%"></div>
-                </div>
-                <span class="stat-angka">90</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Accuracy</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 70%"></div>
-                </div>
-                <span class="stat-angka">70</span>
-              </div>
-            </div>
-
-            <div class="stat-teks">
-              <div class="teks-item">
-                <span>Armor Penetration</span><strong>Level 6</strong>
-              </div>
-              <div class="teks-item">
-                <span>Fire Rate</span><strong>10 RPM</strong>
-              </div>
-              <div class="teks-item">
-                <span>Capacity</span><strong>1 / 30</strong>
-              </div>
-              <div class="teks-item">
-                <span>Mode</span><strong>Single Shot</strong>
-              </div>
-              <div class="teks-item">
-                <span>Muzzle Velocity</span><strong>1500 m/s</strong>
-              </div>
-              <div class="teks-item">
-                <span>Gunshot Sound</span><strong>Very Loud (120 dB)</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ===== DETAIL HELIKOPTER ===== -->
-        <div id="detail-warfare-helikopter" class="detail-senjata">
-          <h3>🚁 Helikopter — Warfare</h3>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">🎬 Video</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-helikopter.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">📊 Gambar</p>
-              <div class="png-wrapper">
-                <img src="warfare-helikopter.png" alt="Helikopter" />
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-box">
-            <h4>📈 Stat Helikopter</h4>
-            <div class="stat-grid">
-              <div class="stat-item">
-                <span class="stat-nama">Damage</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 75%"></div>
-                </div>
-                <span class="stat-angka">75</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Range</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 70%"></div>
-                </div>
-                <span class="stat-angka">70</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Control</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 60%"></div>
-                </div>
-                <span class="stat-angka">60</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Handling</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 65%"></div>
-                </div>
-                <span class="stat-angka">65</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Stability</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 50%"></div>
-                </div>
-                <span class="stat-angka">50</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Accuracy</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 55%"></div>
-                </div>
-                <span class="stat-angka">55</span>
-              </div>
-            </div>
-
-            <div class="stat-teks">
-              <div class="teks-item">
-                <span>Armor Penetration</span><strong>Level 4</strong>
-              </div>
-              <div class="teks-item">
-                <span>Fire Rate</span><strong>600 RPM</strong>
-              </div>
-              <div class="teks-item">
-                <span>Capacity</span><strong>100 / 200</strong>
-              </div>
-              <div class="teks-item">
-                <span>Mode</span><strong>Full Auto</strong>
-              </div>
-              <div class="teks-item">
-                <span>Muzzle Velocity</span><strong>900 m/s</strong>
-              </div>
-              <div class="teks-item">
-                <span>Gunshot Sound</span><strong>Loud (100 dB)</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ===== DETAIL KENDARAAN RINGAN ===== -->
-        <div id="detail-warfare-kendaraan-ringan" class="detail-senjata">
-          <h3>🚙 Kendaraan Ringan — Warfare</h3>
-
-          <div class="perbandingan">
-            <div class="item">
-              <p class="label">🎬 Video</p>
-              <div class="video-wrapper">
-                <video controls>
-                  <source src="warfare-kendaraan-ringan.mp4" type="video/mp4" />
-                  Browser tidak mendukung video.
-                </video>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">📊 Gambar</p>
-              <div class="png-wrapper">
-                <img
-                  src="warfare-kendaraan-ringan.png"
-                  alt="Kendaraan Ringan"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-box">
-            <h4>📈 Stat Kendaraan Ringan</h4>
-            <div class="stat-grid">
-              <div class="stat-item">
-                <span class="stat-nama">Damage</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 40%"></div>
-                </div>
-                <span class="stat-angka">40</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Range</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 40%"></div>
-                </div>
-                <span class="stat-angka">40</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Control</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 80%"></div>
-                </div>
-                <span class="stat-angka">80</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Handling</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 90%"></div>
-                </div>
-                <span class="stat-angka">90</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Stability</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 45%"></div>
-                </div>
-                <span class="stat-angka">45</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-nama">Accuracy</span>
-                <div class="stat-bar">
-                  <div class="stat-isi" style="width: 50%"></div>
-                </div>
-                <span class="stat-angka">50</span>
-              </div>
-            </div>
-
-            <div class="stat-teks">
-              <div class="teks-item">
-                <span>Armor Penetration</span><strong>Level 3</strong>
-              </div>
-              <div class="teks-item">
-                <span>Fire Rate</span><strong>700 RPM</strong>
-              </div>
-              <div class="teks-item">
-                <span>Capacity</span><strong>50 / 100</strong>
-              </div>
-              <div class="teks-item">
-                <span>Mode</span><strong>Full Auto</strong>
-              </div>
-              <div class="teks-item">
-                <span>Muzzle Velocity</span><strong>750 m/s</strong>
-              </div>
-              <div class="teks-item">
-                <span>Gunshot Sound</span><strong>Medium (85 dB)</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tombol-home">
-        <button class="kembali" onclick="bukaHome()">
-          ← Kembali ke Pilih Mode
-        </button>
-      </div>
-    </section>
-
     <!-- FOOTER -->
     <footer>
       <p>Delta Force Guide</p>
     </footer>
 
+    <!-- JAVASCRIPT BERSIH -->
     <script>
       function bukaMode(mode) {
         document
